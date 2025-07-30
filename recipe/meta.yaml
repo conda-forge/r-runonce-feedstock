@@ -1,4 +1,4 @@
-{% set version = '0.2.3' %}
+{% set version = "0.3.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/runonce_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/runonce/runonce_{{ version }}.tar.gz
-  sha256: d686d9735af28b987cb8858620c5194454155dae23ebc3da376bb04613ff9512
+  sha256: 75ba9310074e4c9c16fdd4289743fd90008c5e38c037131d33bba045410dc5c5
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -39,11 +39,8 @@ test:
 about:
   home: https://github.com/privefl/runonce
   license: GPL-3.0-only
-  summary: Package 'runonce' helps automating the saving of long-running code to help running
-    the same code multiple times. If you run some long-running code once, it saves the
-    result in a file on disk. Then, if the result already exists, i.e. if the code has
-    already been run and its output has already been saved, it just reads the result
-    from the stored file instead of running the code again.
+  summary: Package 'runonce' helps automating the saving of long-running code to help running the same code multiple times. If you run some long-running code once, it saves the result in a file on disk. Then, if the result already exists, i.e. if the code has already been run and its output has already been saved, it just
+    reads the result from the stored file instead of running the code again.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
